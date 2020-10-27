@@ -1,3 +1,17 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+:root {
+  --ghost-white: #F4F4F8;
+  --border-blue: #00A6ED;
+  --border-green: #06D6A0;
+  --border-yellow: #FED766;
+  --border-red: #FE4A49;
+  --font-black: #08080A;
+}
+
+html, body {
+  background-color: var(--ghost-white);
+  
+  font-style: 'Open Sans', sans-serif;
+  color: var(--font-black);
 }
