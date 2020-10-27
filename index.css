@@ -12,6 +12,6 @@
 html, body {
   background-color: var(--ghost-white);
   
-  font-style: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: var(--font-black);
 }
