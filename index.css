@@ -6,12 +6,139 @@
   --border-green: #06D6A0;
   --border-yellow: #FED766;
   --border-red: #FE4A49;
+  --gray-1: #242424;
+  --gray-2: #292929;
+  --gray-3: #2E2E2E;
+  --gray-4: #343434;
+  --shadow: #b0b0b0;
+
   --font-black: #08080A;
 }
 
 html, body {
   background-color: var(--ghost-white);
-  
+
   font-family: 'Open Sans', sans-serif;
   color: var(--font-black);
+
+  margin: 0;
+}
+
+/* Layout */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+
+  height: 100%;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: [left] 1fr [right] 1fr [end] 0;
+  width: 100%;
+  padding: 0 10px 0 10px;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  border: 5px solid;
+  margin: 5px;
+  box-shadow: 8px 8px 16px var(--shadow);
+
+  min-height: 250px;
+}
+
+/* Block CSS and Positioning */
+
+.map-block {
+  grid-column-start: left;
+  grid-column-end: end;
+  margin-bottom: 10px;
+}
+.article-left {
+  grid-column: left / right;
+}
+.article-right {
+  grid-column: right;
+}
+
+/* Sidebar, Footer, and Other Static Elements */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: left / end;
+
+  margin: 0;
+  height: 80px;
+}
+.sidebar {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--gray-1);
+  color: var(--ghost-white);
+
+  width: 90px;
+  height: auto;
+}
+
+/* Border Colors and Color Related Classes */
+
+.border-green {
+  border-color: var(--border-green);
+}
+.border-blue {
+  border-color: var(--border-blue);
+}
+.border-yellow {
+  border-color: var(--border-yellow);
+}
+.border-red {
+  border-color: var(--border-red);
+}
+
+/* Grid Scrollbar */
+
+.grid {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.grid::-webkit-scrollbar {
+    width: 15px;
+}
+
+.grid::-webkit-scrollbar-track {
+  border-radius: 2px;
+  width: 10px;
+}
+
+.grid::-webkit-scrollbar-thumb, .grid::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-3);
+  border: 4px solid transparent;
+  border-radius: 10px;
+  background-clip: content-box;
+}
+
+.grid::-webkit-scrollbar-thumb:active {
+  background: var(--gray-2);
+  border: 2px solid transparent;
+  border-radius: 2px;
+  background-clip: content-box;
 }
