@@ -13,3 +13,8 @@
   grid-row: footer;
   grid-column: 1;
 }
+
+.mobile-footer {
+  grid-row: footer;
+  grid-column: 1;
+}
