@@ -52,7 +52,7 @@ html, body {
   border-radius: 10px;
   border: 5px solid;
   margin: 5px;
-  box-shadow: 8px 8px 16px var(--shadow);
+  box-shadow: 8px 5px 16px var(--shadow);
 
   min-height: 250px;
 }
@@ -92,7 +92,7 @@ html, body {
   background-color: var(--gray-1);
   color: var(--ghost-white);
 
-  width: 90px;
+  width: 110px;
   height: auto;
 }
 
@@ -131,7 +131,7 @@ html, body {
 
 .grid::-webkit-scrollbar-thumb, .grid::-webkit-scrollbar-thumb:hover {
   background: var(--gray-3);
-  border: 4px solid transparent;
+  border: 4.5px solid transparent;
   border-radius: 10px;
   background-clip: content-box;
 }
