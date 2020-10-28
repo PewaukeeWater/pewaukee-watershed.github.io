@@ -4,7 +4,7 @@ var sidebar = document.getElementsByClassName('sidebar')[0];
 var footer = document.getElementsByClassName('footer')[0];
 
 var checkMobile = () => {
-  if ( window.innerWidth < 800 ) {
+  if ( window.innerHeight > window.innerWidth ) {
     content.classList.remove("content");
     content.classList.add("mobile-content");
 

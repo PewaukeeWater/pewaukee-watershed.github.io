@@ -22,6 +22,7 @@ html, body {
   color: var(--font-black);
 
   margin: 0;
+  overflow: hidden;
 }
 
 /* Layout */
@@ -41,7 +42,7 @@ html, body {
   display: grid;
   grid-template-columns: [left] 1fr [right] 1fr [end] 0;
   width: 100%;
-  padding: 0 10px 0 10px;
+  padding: 10px 10px 0 10px;
 }
 
 .block {
@@ -51,7 +52,7 @@ html, body {
 
   border-radius: 10px;
   border: 5px solid;
-  margin: 5px;
+  margin: 10px 5px 0 5px;
   box-shadow: 8px 5px 16px var(--shadow);
 
   min-height: 250px;
@@ -95,6 +96,7 @@ html, body {
 
   width: 110px;
   height: auto;
+  max-width: 25%;
 }
 
 /* Border Colors and Color Related Classes */
@@ -170,8 +172,9 @@ a {
   justify-content: center;
 
   width: 100%;
-  height: 60px;
+  height: 75px;
   margin-bottom: 10px;
+  max-height: 25%;
 
   background-color: var(--gray-1);
   color: var(--ghost-white);
