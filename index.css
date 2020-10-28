@@ -149,3 +149,40 @@ a {
   text-decoration: inherit;
   color: inherit;
 }
+
+/* Mobile Sidebar */
+
+.mobile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+
+  height: 100%;
+  overflow: hidden;
+}
+.mobile-sidebar {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+
+  background-color: var(--gray-1);
+  color: var(--ghost-white);
+}
+.mobile-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: left / end;
+
+  margin: 0;
+  height: 80px;
+}
