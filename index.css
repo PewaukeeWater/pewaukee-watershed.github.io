@@ -10,9 +10,11 @@
   --gray-2: #292929;
   --gray-3: #2E2E2E;
   --gray-4: #343434;
-  --shadow: #b0b0b0;
+  --shadow: #a8a8a8;
 
   --font-black: #08080A;
+  --font-white: #F4F4F8;
+  --font-white-hover: #D7F3FA;
 }
 
 html, body {
@@ -41,6 +43,7 @@ html, body {
 .grid {
   display: grid;
   grid-template-columns: [left] 1fr [right] 1fr [end] 0;
+  grid-template-rows: [content] 1fr;
   width: 100%;
   padding: 10px 10px 0 10px;
 }
@@ -56,6 +59,12 @@ html, body {
   box-shadow: 8px 5px 16px var(--shadow);
 
   min-height: 250px;
+
+  transition: all 0.5s;
+  will-change: font-size;
+}
+.block:hover {
+  font-size: 20px;
 }
 
 /* Block CSS and Positioning */
@@ -64,6 +73,7 @@ html, body {
   grid-column-start: left;
   grid-column-end: end;
   margin-bottom: 10px;
+  min-height: 350px;
 }
 .article-left {
   grid-column: left / right;
@@ -76,27 +86,15 @@ html, body {
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   grid-column: left / end;
 
   margin: 0;
+  padding: 0;
   height: 80px;
-}
-.sidebar {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--gray-1);
-  color: var(--ghost-white);
-
-  width: 110px;
-  height: auto;
-  max-width: 25%;
 }
 
 /* Border Colors and Color Related Classes */
@@ -114,13 +112,51 @@ html, body {
   border-color: var(--border-red);
 }
 
+/* Sidebar */
+
+.sidebar {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--gray-1);
+  color: var(--font-white);
+
+  width: 110px;
+  height: auto;
+  max-width: 25%;
+}
+.center-buttons {
+  display: flex;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 20%;
+}
+.sidebar-button {
+  font-size: 20px;
+  transition: all 0.5s;
+  will-change: font-size, color;
+}
+.sidebar-button:hover {
+  font-size: 22px;
+  color: var(--font-white-hover);
+}
+.map-button:hover {
+  margin: 2px 0 2px 0;
+}
+
 /* Grid Scrollbar */
 
 .grid {
   position: sticky;
   top: 0;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .grid::-webkit-scrollbar {
