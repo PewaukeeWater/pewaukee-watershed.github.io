@@ -114,6 +114,9 @@ html, body {
 .border-red {
   border-color: var(--border-red);
 }
+.return {
+  color: #4DD7DB;
+}
 
 /* Sidebar */
 
