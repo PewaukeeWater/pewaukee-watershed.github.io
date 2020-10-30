@@ -88,7 +88,7 @@ html, body {
 
 .footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
@@ -97,6 +97,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 80px;
+  width: 100%;
 }
 
 /* Border Colors and Color Related Classes */
