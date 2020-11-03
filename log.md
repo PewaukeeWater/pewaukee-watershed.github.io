@@ -8,3 +8,5 @@ This is a log of things that we did.
 - Created a pull request for about-us branch.
 - Reviewed pull request and gave feedback.
 - Created a prettier-pages branch to improve links.
+- Created a branch called `us`
+- Worked on the About Us page
