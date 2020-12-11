@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Compile React
-        uses: Pewaukee-Watershed/compiler-actions@main
+        uses: Pewaukee-Watershed/compiler-actions@1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
