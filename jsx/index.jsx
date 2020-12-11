@@ -7,10 +7,10 @@ class App extends React.Component {
     if(this.state) {
       return <h1>I was clicked</h1>
     } else {
-      const onclick = () => {
+      const onClick = () => {
         this.setState(true)
       }
-      return <button onclick={onclick}>Button</button>
+      return <button onClick={onClick}>Button</button>
     }
   }
 }
