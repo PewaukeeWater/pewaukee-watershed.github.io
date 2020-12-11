@@ -2,15 +2,19 @@ const React = window.React
 class App extends React.Component {
   constructor() {
     super();
-    this.state = false;
+    this.state = {
+      clicked: false
+    };
   }
 
   render() {
-    if (this.state) {
+    if (this.state.clicked) {
       return /*#__PURE__*/React.createElement("h1", null, "I was clicked");
     } else {
       const onClick = () => {
-        this.setState(true);
+        this.setState({
+          clicked: true
+        });
       };
 
       return /*#__PURE__*/React.createElement("button", {
