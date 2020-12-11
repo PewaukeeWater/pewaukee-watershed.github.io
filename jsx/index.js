@@ -9,12 +9,12 @@ class App extends React.Component {
     if (this.state) {
       return /*#__PURE__*/React.createElement("h1", null, "I was clicked");
     } else {
-      const onclick = () => {
+      const onClick = () => {
         this.setState(true);
       };
 
       return /*#__PURE__*/React.createElement("button", {
-        onclick: onclick
+        onClick: onClick
       }, "Button");
     }
   }
